@@ -1,0 +1,42 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Art Gallery: @ViewBag.Title</title>
+    <link href="~/css/site.css" rel="stylesheet" />
+    <link href="~/node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+</head>
+<body>
+    <header class="container-fluid">        
+        <nav class="navbar navbar-dark bg-dark navbar-expand-md">
+            <h1 class="navbar-brand">Welcome To Art Gallery</h1>
+            <button class="navbar-toggler" data-toggle="collapse" data-target="#theMenu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div id="theMenu" class="navbar-collapse collapse">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" asp-controller="App" asp-action="Index">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" asp-controller="App" asp-action="Contact">Contact</a></li>
+                    <li class="nav-item"><a class="nav-link" asp-controller="App" asp-action="About">About</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    
+    <div class="container" id="renderBody">
+        <section>
+            <h2>@ViewBag.Title</h2>
+        </section>
+        @RenderBody()
+    </div>
+
+    <br />
+    <footer class="text-center text-light bg-dark">Copyright 2018 Gallery LCC</footer>
+
+    <script src="~/node_modules/jquery/dist/jquery.min.js"></script>    
+    <script src="~/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/index.js"></script>
+    @RenderSection("scripts", false)
+
+</body>
+</html>

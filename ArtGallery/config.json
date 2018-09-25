@@ -1,0 +1,8 @@
+{
+  "Colors": {
+    "Favorite": "blue"
+  },
+  "ConnectionStrings": {
+    "ArtGalleryConnectionString":  "server=(localdb)\\Projectsv13;Database=ArtGalleryDB;Integrated Security=true;MultipleActiveResults=true"
+  }
+}
